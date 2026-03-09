@@ -70,7 +70,7 @@ export default async function Home() {
               {templates.map((t) => (
                 <Link
                   key={t.id}
-                  href={`/dat-hang?template=${t.slug}`}
+                  href={`/demo/${t.slug}`}
                   className="group block rounded-xl border border-gray-200 bg-white overflow-hidden shadow-sm transition hover:shadow-md hover:border-rose-200"
                 >
                   <div className="aspect-[3/4] bg-gray-100 relative overflow-hidden">

@@ -54,10 +54,12 @@ export function InvitationViewer({
   invitation,
   order,
   template,
+  frameHeight = "100vh",
 }: {
   invitation: Invitation;
   order: Order;
   template: Template;
+  frameHeight?: string;
 }) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
@@ -119,12 +121,12 @@ export function InvitationViewer({
   }
 
   return (
-    <div className="w-full" style={{ height: "100vh" }}>
+    <div className="w-full" style={{ height: frameHeight }}>
       <iframe
         ref={iframeRef}
         title="Thiệp cưới"
         className="w-full border-0"
-        style={{ height: "100vh" }}
+        style={{ height: frameHeight }}
         sandbox="allow-scripts allow-same-origin"
       />
     </div>

@@ -65,6 +65,10 @@ export default async function InvitationPage({
 
   const showRsvp = (await getCmsByKey(supabase, "show_rsvp")) !== "false";
 
+  // Nếu template đã có RSVP tích hợp bên trong (tag 'has-rsvp') thì không render thêm RsvpSection ngoài
+  const templateTags = (template as { tags?: string[] | null } | null)?.tags ?? [];
+  const templateHasRsvp = templateTags.includes("has-rsvp");
+
   return (
     <div className="min-h-screen flex flex-col">
       <InvitationViewer
@@ -72,7 +76,7 @@ export default async function InvitationPage({
         order={order}
         template={template}
       />
-      {showRsvp && (
+      {showRsvp && !templateHasRsvp && (
         <RsvpSection
           invitationId={invitation.id}
           orderId={order.id}
