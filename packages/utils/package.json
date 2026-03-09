@@ -1,0 +1,12 @@
+{
+  "name": "@wedding-invitation/utils",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "echo 'No build output'",
+    "lint": "echo 'No lint'",
+    "clean": "node -e \"try{require('fs').rmSync('dist',{recursive:true})}catch(e){}\""
+  }
+}

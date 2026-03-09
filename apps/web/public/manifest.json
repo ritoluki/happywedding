@@ -1,0 +1,11 @@
+{
+  "name": "Thiệp Cưới Điện Tử",
+  "short_name": "Thiệp Cưới",
+  "description": "Gửi lời mời đặc biệt đến từng người thân yêu",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#9f1239",
+  "orientation": "portrait-primary",
+  "icons": []
+}
